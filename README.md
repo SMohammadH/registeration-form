@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+<div dir='rtl'>
+  
+#  فرم ری اکت
+ این فرم دو مرحله ای است. در مرحله اول استان و شهر، در مرحله دوم نام و شماره تلفن فرد دریافت میشود. اطلاعات دریافت شده در قسمت پایین فرم بصورت یک جدول نمایش داده میشود و در انتها کلید ارسال وجود دارد. با فشار دادن کلید ارسال، اطالاعات وارد شده بصورت JSON برای API  مورد نظر ارسال میشود.
+  
+## نحوه ایجاد تغییرات در پروژه
+ برای دریافت اطلاعات وارد شده در فرم کافی است به فایل .env  در شاخه root  مراجعه کرده و لینک خود را مقابل REACT_APP_POST_SERVER= بنویسید.
+برای تغییردررنگ پوسته به فایل tailwind.config.js مراجعه کرده و مقدار مورد نظر خود را جایگزین colors.indigo  کنید. برای مثال اگر رنگ سبز میخواهید فقط عبارت colors.green  را جایگزین colors.indigo  کنید.
+برای تغییر فونت به فایل index.css  مراجعه کرده و فونت دلخواه خود را ایمپورت کنید و در همان فایل نام فونت را به font-family که از قبل نوشته شده بدهید.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  
+  
+## نحوه کار فرم
+  در مرحله اول فرم نام استان دریافت میگردد سپس فقط لیست شهر های همان استان در فیلد شهر نمایش داده میشود.
+با کلیک بر روی مرحله بعد فرم وارد مرحله دوم میشود.
+در مرحله دوم نام و نام خانوادگی فرد دریافت میگردد. حداقل تعداد ورودی این فیلد 2 کاراکتر است(این مقدار قابل تغییر است).
+در فیلد دوم شماره تلفن دریافت میگردد که ورودی فقط میتواند عدد و بصورت یازده رقمی باشد.
+در صورت خالی بودن هر یک از فیلد ها کلید ارسال غیرفعال خواهد بود.
 
-## Available Scripts
+## تکنولوژی های استفاده شده در این پروژه
+  پروژه با React, React-Hook-Form, React-Query, Tailwind-CSS  ساخته شده.
+ساخت پروژه با ورژن 17.0.2 ری اکت انجام شده. تمامی کامپوننت ها فانکشنال هستند و خبری از کلاس کامپوننت نیست.
+قسمت سی اس اس پروژه بطور کامل با تیلویند انجام شده ودر نتیجه سبک ترین فایل سی اس اس را خواهیم داشت.
+فرم به کمک کتابخانه React-Hook-Form نوشته شده که سریعترین پرفورمنس را در میان کتابخانه های فعلی فونت دارد.
+دریافت لیست شهر ها و ارسال اطلاعات فرم به API بوسیله کتابخانه React-Query  صورت گرفته. که پرفورمنس و کشینگ بهتری داشته باشیم.
+همچنین لیست استان ها در public/provinces.json و لیست شهر ها در public/cities.json هر دو بصورت جیسان توسط react-query  فچ میشوند.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  
+</div>
