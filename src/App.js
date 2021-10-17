@@ -1,4 +1,3 @@
-import './App.css';
 import Form from './Form.js';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
